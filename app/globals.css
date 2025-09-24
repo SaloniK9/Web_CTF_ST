@@ -1,26 +1,61 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* === Fonts & Base Body === */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Press Start 2P', monospace;
+  background: linear-gradient(180deg, #0b0c0f 0%, #1a1b1f 100%);
+  color: #ff3c3c;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Noise / Grain Overlay === */
+.bg-noise {
+  background-image: url('/assets/noise.png');
+  background-repeat: repeat;
+  pointer-events: none; /* so clicks go through */
+}
+
+/* === Inputs & Buttons === */
+input, button {
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* === Neon Text & Flicker Animation === */
+.neon-text {
+  text-shadow:
+    0 0 5px #ff3c3c,
+    0 0 10px #ff3c3c,
+    0 0 20px #ff3c3c,
+    0 0 40px #ff0000;
+}
+
+.flicker {
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 24%, 55% { opacity: 0.4; }
+}
+
+/* === Animated Gradient Background === */
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bg-animated {
+  background: linear-gradient(270deg, #0b0c0f, #1a1b1f, #111111);
+  background-size: 600% 600%;
+  animation: moveGradient 30s ease infinite;
+}
+
+/* === Input / Button Hover Glow === */
+input:focus, button:hover {
+  box-shadow: 0 0 15px #ff3c3c;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
 }
