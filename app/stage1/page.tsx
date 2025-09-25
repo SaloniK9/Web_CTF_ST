@@ -35,7 +35,7 @@ export default function Stage1() {
         Stage 1 – The Upside Down
       </h1>
       <p className="mb-6 text-center md:text-lg">
-        Inspect the code and console carefully. Hidden secrets lurk in the darkness.
+        Inspect the Portal carefully. Hidden secrets lurk in the darkness.
       </p>
 
       <input
