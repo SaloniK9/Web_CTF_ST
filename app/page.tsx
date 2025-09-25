@@ -9,6 +9,7 @@ export default function LandingPage() {
     
     <div className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-b from-black via-purple-900 to-black text-white overflow-hidden">
       <Head>
+        
         <title>The Ultimate Challenge | Stranger Things Edition</title>
         <meta name="description" content="Embark on a journey of puzzles, codes, and hidden secrets. Only the curious survive." />
       </Head>
@@ -24,7 +25,7 @@ export default function LandingPage() {
         The Upside Down Awaits
       </h1>
       <p className="text-xl mb-10 text-center max-w-xl drop-shadow-md">
-        Embark on a journey of puzzles, codes, and hidden secrets. Only the curious survive.
+        Embark on a journey of puzzles, codes, and hidden secrets. It's Not your regular Quest. Only the curious survive.
       </p>
 
       {/* Glowing button */}
