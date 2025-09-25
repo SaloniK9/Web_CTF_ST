@@ -1,9 +1,17 @@
 import Link from "next/link";
+import Head from "next/head";
 
 export default function LandingPage() {
   return (
+
+    
     <div className="relative flex flex-col items-center justify-center h-screen bg-gradient-to-b from-black via-purple-900 to-black text-white overflow-hidden">
-      
+      <Head>
+        <title>The Ultimate Challenge | Stranger Things Edition</title>
+        <meta name="description" content="Embark on a journey of puzzles, codes, and hidden secrets. Only the curious survive." />
+      </Head>
+    
+
       {/* Background circles */}
       <div className="absolute w-96 h-96 bg-purple-700 rounded-full opacity-20 animate-ping top-[-50px] left-[-50px] pointer-events-none"></div>
       <div className="absolute w-80 h-80 bg-indigo-600 rounded-full opacity-20 animate-pulse bottom-[-40px] right-[-40px] pointer-events-none"></div>
