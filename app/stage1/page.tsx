@@ -7,6 +7,11 @@ export default function Stage1() {
   const [msg, setMsg] = useState("");
   const router = useRouter();
 
+<div
+  className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center px-4 text-red-600"
+  style={{ backgroundImage: "url('C:\Users\salon\OneDrive\문서\websites\Web Exp challenge\webctfst\public\assets\BGstage1.jpg')" }}
+></div>
+
   const submitFlag = async () => {
     const res = await fetch("/api/verify", {
       method: "POST",
